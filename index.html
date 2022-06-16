@@ -1,36 +1,16 @@
+<!-- Home page of simulator -->
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Virtual Lab</title>
-    <link rel="stylesheet" href="style.css">
-    
-</head>
-<body style="margin: 0px;">
-    <div class="blocker" onclick="hidePopup()" id="blocker"></div>
-    <div class="emptynav"></div>
-    <header>
-        <div class="navbar">
-            <button onclick="showPopup()" class="listbutton"><img src="list.png" alt="listlogo" class="listlogo"></button>
-            <img src="vlab_logo.jpg" alt="vlab logo" class="logo" height="70px" width="114px">
-            <div class="heading"><h2>Hall-Effect : Determination of carrier concentration</h2></div>
-        </div>
-    </header>
-    
-    <div id="popup">
-            <a href="" style="margin-top:7px ;">Aim</a>
-            <a href="">Theory</a>
-            <a href="">Pretest</a>
-            <a href="">Procedure</a>
-            <a href="">Simulation</a>
-            <a href="">Posttest</a>
-            <a href="">References</a>
-            <a href="">Feedback</a>
-    </div>
-
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/main.css">
+        <link rel="stylesheet" href="css/style.css">
+        <title>Document</title>
+    </head>
+    <body>
+    <!-- simulation -->
     <div class="simulation">
         <div class="topic">
             <h2>Hall-Effect : Determination of carrier concentration</h2>
@@ -44,68 +24,33 @@
                     </li>
                 </ol>
                 <h4>Apparatus Used:</h4>
-                <p>Two solenoids, Constant current supply, Four probe, Digital gauss meter, Hall effect apparatus (which
-                    consist of Constant Current Generator (CCG),digital milli voltmeter and Hall probe).</p>
+                <p>Two solenoids, Constant current supply, Four probe, Digital gauss meter, Hall effect apparatus (which consist of Constant Current Generator (CCG),digital milli voltmeter and Hall probe).</p>
             </div>
-    
             <div class="grid-container">
-                <div class="grid-item"><img class='img1' src="ammeter.jpeg" alt="ammeter"></div>
-                <div class="grid-item"><img class='img2' src="electromagnet.jpeg" alt="electromagent"></div>
-                <div class="grid-item"><img class='img3' src="gauss.jpeg" alt="gauss"></div>
+                <div class="grid-item"><img class='img1' src="images/ammeter.jpg" alt="ammeter"></div>
+                <div class="grid-item"><img class='img2' src="images/electromagnet.jpg" alt="electromagent"></div>
+                <div class="grid-item"><img class='img3' src="images/gauss.jpg" alt="gauss"></div>
             </div>
         </div>
+
+        <!-- content2 -->
         <div style="display: none;" id="content2">
             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sed, reprehenderit?</p>
         </div>
+
+        <!-- content3 -->
         <div style="display: none;" id="content3">
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, eum et, dicta perferendis officia facilis ab nisi dolore eveniet fugit, nulla cupiditate similique consequatur veniam modi aliquid. Pariatur, optio animi.</p>
         </div>
 
         <!-- next button -->
         <div class="next">
-            <button class="arrow" onclick="next()"><img src="arrow.png" alt="arrow"></button>
+            <button class="arrow" onclick="next()"><img src="images/arrow.png" alt="arrow"></button>
         </div>
     </div>
 
-    <script>
-        const popup = document.querySelector('.popup');
-        function showPopup() {
-            if (document.getElementById('popup').style.display == 'none') {
-                document.getElementById('popup').style.display = 'block';
-                document.getElementById('blocker').style.display = 'block';
-                window.onscroll = function (e) {  
-                    hidePopup();
-                }
-            }
-            else {
-                hidePopup();
-            }
-        }
-
-        function hidePopup() {
-            document.getElementById('popup').style.display = 'none';
-            document.getElementById('blocker').style.display = 'none';
-        }
-
-        var a=1;
-        function next() {
-            a+=1;
-            if (a==1){
-                document.getElementById("content").style.display = 'block';
-                document.getElementById("content2").style.display = 'none';
-            }
-            else if (a==2){
-                document.getElementById("content").style.display = 'none';
-                document.getElementById("content2").style.display = 'block';
-                document.getElementById("content3").style.display = 'none';
-            }
-            else if (a==3){
-                document.getElementById("content2").style.display = 'none';
-                document.getElementById("content3").style.display = 'block';
-                // document.getElementById("content4").style.display = 'none';
-            }
-        }
-        
-    </script>
-</body>
+    <script src="js/data.js"></script>
+    <script src="js/filename.js"></script>
+    <script src="js/main.js"></script>
+    </body>
 </html>
