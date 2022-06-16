@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Virtual Lab</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+<body style="margin: 0px;">
+    <div class="blocker" onclick="hidePopup()" id="blocker"></div>
+    <div class="emptynav"></div>
+    <header>
+        <div class="navbar">
+            <button onclick="showPopup()" class="listbutton"><img src="images/list.png" alt="listlogo" class="listlogo"></button>
+            <img src="images/vlab_logo.jpg" alt="vlab logo" class="logo" height="70px" width="114px">
+            <div class="heading"><h2>Hall-Effect : Determination of carrier concentration</h2></div>
+        </div>
+    </header>
+    
+    <div id="popup">
+            <a href="" style="margin-top:7px ;">Aim</a>
+            <a href="">Theory</a>
+            <a href="">Pretest</a>
+            <a href="">Procedure</a>
+            <a href="">Simulation</a>
+            <a href="">Posttest</a>
+            <a href="">References</a>
+            <a href="">Feedback</a>
+    </div>
+
+    <div class="simulation">
+        <div class="topic">
+            <h2>Hall-Effect : Determination of carrier concentration</h2>
+        </div>
+        <div class="subtopics">
+            <h4>Objective:</h4>
+            <ol>
+                <li>&ensp;To determine the Hall voltage developed across the sample material.</li>
+                <li>&ensp;To calculate the Hall coefficient and the carrier concentration of the sample material.
+                </li>
+            </ol>
+            <h4>Apparatus Used:</h4>
+            <p>Two solenoids, Constant current supply, Four probe, Digital gauss meter, Hall effect apparatus (which
+                consist of Constant Current Generator (CCG),digital milli voltmeter and Hall probe).</p>
+        </div>
+
+        <div class="grid-container">
+            <div class="grid-item"><img class='img1' src="images/ammeter.jpeg" alt="ammeter"></div>
+            <div class="grid-item"><img class='img2' src="images/electromagnet.jpeg" alt="electromagent"></div>
+            <div class="grid-item"><img class='img3' src="images/gauss.jpeg" alt="gauss"></div>
+        </div>
+        <!-- next button -->
+        <div class="next">
+            <button class="arrow"><img src="images/arrow.png" alt="arrow"></button>
+        </div>
+    </div>
+
+    <script>
+        const popup = document.querySelector('.popup');
+        function showPopup() {
+            if (document.getElementById('popup').style.display == 'none') {
+                document.getElementById('popup').style.display = 'block';
+                document.getElementById('blocker').style.display = 'block';
+            }
+            else {
+                hidePopup();
+            }
+        }
+
+        function hidePopup() {
+            document.getElementById('popup').style.display = 'none';
+            document.getElementById('blocker').style.display = 'none';
+        }
+        
+    </script>
+</body>
+</html>
