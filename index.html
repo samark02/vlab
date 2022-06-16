@@ -14,8 +14,8 @@
     <div class="emptynav"></div>
     <header>
         <div class="navbar">
-            <button onclick="showPopup()" class="listbutton"><img src="list.png" alt="listlogo" class="listlogo"></button>
-            <img src="vlab_logo.jpg" alt="vlab logo" class="logo" height="70px" width="114px">
+            <button onclick="showPopup()" class="listbutton"><img src="images/list.png" alt="listlogo" class="listlogo"></button>
+            <img src="images/vlab_logo.jpg" alt="vlab logo" class="logo" height="70px" width="114px">
             <div class="heading"><h2>Hall-Effect : Determination of carrier concentration</h2></div>
         </div>
     </header>
@@ -48,13 +48,13 @@
         </div>
 
         <div class="grid-container">
-            <div class="grid-item"><img class='img1' src="ammeter.jpeg" alt="ammeter"></div>
-            <div class="grid-item"><img class='img2' src="electromagnet.jpeg" alt="electromagent"></div>
-            <div class="grid-item"><img class='img3' src="gauss.jpeg" alt="gauss"></div>
+            <div class="grid-item"><img class='img1' src="images/ammeter.jpeg" alt="ammeter"></div>
+            <div class="grid-item"><img class='img2' src="images/electromagnet.jpeg" alt="electromagent"></div>
+            <div class="grid-item"><img class='img3' src="images/gauss.jpeg" alt="gauss"></div>
         </div>
         <!-- next button -->
         <div class="next">
-            <button class="arrow"><img src="arrow.png" alt="arrow"></button>
+            <button class="arrow"><img src="images/arrow.png" alt="arrow"></button>
         </div>
     </div>
 
@@ -64,6 +64,9 @@
             if (document.getElementById('popup').style.display == 'none') {
                 document.getElementById('popup').style.display = 'block';
                 document.getElementById('blocker').style.display = 'block';
+                window.onscroll = function (e) {  
+                    hidePopup();
+                }
             }
             else {
                 hidePopup();
