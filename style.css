@@ -116,9 +116,181 @@
 }
 
 #content2 {
-  background-color: lightcoral;
+  background-color: rgba(240, 128, 128, 0.644);
   width: 800px;
   height: 500px;
+}
+
+/* options */
+
+.simoptions {
+  background-color: rgb(236, 236, 120);
+  width: 25%;
+  height: 500px;
+  float: left;
+}
+
+.procedure {
+  margin: 10px;
+}
+
+#exp {
+  height: 35px;
+  width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219);
+  cursor: pointer;
+}
+
+.insert-reset{
+  display: flex;
+  justify-content: center; 
+  margin: 10px;
+}
+.insert-reset button{
+  width: 120px;
+  height: 30px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.current {
+  margin: 10px;
+}
+
+.cslider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: black;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.cslider:hover {
+  opacity: 1;
+}
+
+.cslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #58615e;
+  cursor: pointer;
+}
+.cslider::-webkit-slider-thumb:hover{
+  width: 20px;
+  height: 20px;
+}
+
+/* .cslider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: #04AA6D;
+  cursor: pointer;
+} */
+
+.materialdiv {
+  /* background-color: rgb(144, 205, 255); */
+  text-align: center;
+  margin: 10px;
+}
+
+#materials {
+  height: 35px;
+  width: 180px;
+  box-shadow: 0px 8px 16px 0px rgba(65, 62, 62, 0.219);
+  cursor: pointer;
+}
+
+.thickness {
+  margin: 10px;
+}
+
+.tslider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: black;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.tslider:hover {
+  opacity: 1;
+}
+
+.tslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #58615e;
+  cursor: pointer;
+}
+.tslider::-webkit-slider-thumb:hover{
+  width: 20px;
+  height: 20px;
+}
+
+.hallcurrent {
+  margin: 10px;
+}
+
+.hcslider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 5px;
+  border-radius: 5px;
+  background: black;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.hcslider:hover {
+  opacity: 1;
+}
+
+.hcslider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background: #58615e;
+  cursor: pointer;
+}
+.hcslider::-webkit-slider-thumb:hover{
+  width: 20px;
+  height: 20px;
+}
+
+.result{
+  margin: 10px;
+  /* background-color: red; */
+  text-align: left;
+}
+
+
+/* Simulation Box */
+
+.mainsimulation {
+  background-color: rgb(85, 127, 85);
+  width: 75%;
+  height: 500px;
+  float: right;
+  text-align: center;
 }
 
 #content3 {
