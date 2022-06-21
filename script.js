@@ -31,6 +31,33 @@ function next() {
     }
 }
 
+// procedure selection
+let pcheck;
+function update() {
+    var select = document.getElementById('exp');
+    var option = select.options[select.selectedIndex].value;
+    // document.getElementById('value').value = option;
+    // document.getElementById('text').value = option;
+
+    if (option == 'mfield vs current') {
+        document.getElementById("circuit1").style.display = 'block';
+        document.getElementById("circuit2").style.display = 'none';
+        document.getElementById("circuit3").style.display = 'none';
+        document.getElementById("circuit4").style.display = 'none';
+        pcheck = true;
+        remove()
+    }
+    else if (option == 'Hall Effect') {
+        document.getElementById("circuit1").style.display = 'none';
+        document.getElementById("circuit2").style.display = 'none';
+        document.getElementById("circuit3").style.display = 'block';
+        document.getElementById("circuit4").style.display = 'none';
+        pcheck = false;
+        remove()
+    }
+
+}
+
 // probe button
 function insert() {
     document.getElementById("insert").style.display = 'none';
@@ -47,11 +74,24 @@ function insert() {
     document.getElementById("showvoltage").disabled = false;
     document.getElementById("showcurrent").disabled = false;
 
+    if (pcheck == true) {
+        document.getElementById("circuit1").style.display = 'none';
+        document.getElementById("circuit2").style.display = 'block';
+        document.getElementById("circuit4").style.display = 'none';
+        document.getElementById("circuit3").style.display = 'none';
+    }
+    else if (pcheck == false) {
+        document.getElementById("circuit1").style.display = 'none';
+        document.getElementById("circuit2").style.display = 'none';
+        document.getElementById("circuit4").style.display = 'block';
+        document.getElementById("circuit3").style.display = 'none';
+    }
+
 }
 function remove() {
     document.getElementById("remove").style.display = 'none';
     document.getElementById("insert").style.display = 'block';
-    
+
     document.getElementById("cslider").style.opacity = '0.5';
     document.getElementById("tslider").style.opacity = '0.5';
     document.getElementById("hcslider").style.opacity = '0.5';
@@ -62,7 +102,21 @@ function remove() {
     document.getElementById("hcslider").disabled = true;
     document.getElementById("showvoltage").disabled = true;
     document.getElementById("showcurrent").disabled = true;
+
+    if (pcheck == true) {
+        document.getElementById("circuit1").style.display = 'block';
+        document.getElementById("circuit2").style.display = 'none';
+        document.getElementById("circuit3").style.display = 'none';
+        document.getElementById("circuit4").style.display = 'none';
+    }
+    else if (pcheck == false) {
+        document.getElementById("circuit1").style.display = 'none';
+        document.getElementById("circuit2").style.display = 'none';
+        document.getElementById("circuit3").style.display = 'block';
+        document.getElementById("circuit4").style.display = 'none';
+    }
 }
+
 
 // current slider
 var cslider = document.getElementById("cslider");
