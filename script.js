@@ -45,6 +45,7 @@ function update() {
         document.getElementById("circuit3").style.display = 'none';
         document.getElementById("circuit4").style.display = 'none';
         pcheck = true;
+        disable()
         remove()
     }
     else if (option == 'Hall Effect') {
@@ -55,7 +56,28 @@ function update() {
         pcheck = false;
         remove()
     }
+}
 
+function enable() {
+    document.getElementById("tslider").style.opacity = '1';
+    document.getElementById("hcslider").style.opacity = '1';
+
+    document.getElementById("materials").disabled = false;
+    document.getElementById("tslider").disabled = false;
+    document.getElementById("hcslider").disabled = false;
+    document.getElementById("showvoltage").disabled = false;
+    document.getElementById("showcurrent").disabled = false;
+}
+
+function disable() {
+    document.getElementById("tslider").style.opacity = '0.5';
+    document.getElementById("hcslider").style.opacity = '0.5';
+
+    document.getElementById("materials").disabled = true;
+    document.getElementById("tslider").disabled = true;
+    document.getElementById("hcslider").disabled = true;
+    document.getElementById("showvoltage").disabled = true;
+    document.getElementById("showcurrent").disabled = true;
 }
 
 // probe button
@@ -64,15 +86,7 @@ function insert() {
     document.getElementById("remove").style.display = 'block';
 
     document.getElementById("cslider").style.opacity = '1';
-    document.getElementById("tslider").style.opacity = '1';
-    document.getElementById("hcslider").style.opacity = '1';
-
     document.getElementById("cslider").disabled = false;
-    document.getElementById("materials").disabled = false;
-    document.getElementById("tslider").disabled = false;
-    document.getElementById("hcslider").disabled = false;
-    document.getElementById("showvoltage").disabled = false;
-    document.getElementById("showcurrent").disabled = false;
 
     if (pcheck == true) {
         document.getElementById("circuit1").style.display = 'none';
@@ -85,23 +99,17 @@ function insert() {
         document.getElementById("circuit2").style.display = 'none';
         document.getElementById("circuit4").style.display = 'block';
         document.getElementById("circuit3").style.display = 'none';
+        enable()
     }
-
 }
+
 function remove() {
     document.getElementById("remove").style.display = 'none';
     document.getElementById("insert").style.display = 'block';
 
     document.getElementById("cslider").style.opacity = '0.5';
-    document.getElementById("tslider").style.opacity = '0.5';
-    document.getElementById("hcslider").style.opacity = '0.5';
-
     document.getElementById("cslider").disabled = true;
-    document.getElementById("materials").disabled = true;
-    document.getElementById("tslider").disabled = true;
-    document.getElementById("hcslider").disabled = true;
-    document.getElementById("showvoltage").disabled = true;
-    document.getElementById("showcurrent").disabled = true;
+
 
     if (pcheck == true) {
         document.getElementById("circuit1").style.display = 'block';
@@ -114,6 +122,7 @@ function remove() {
         document.getElementById("circuit2").style.display = 'none';
         document.getElementById("circuit3").style.display = 'block';
         document.getElementById("circuit4").style.display = 'none';
+        disable()
     }
 }
 
@@ -158,3 +167,12 @@ function current() {
     document.getElementById("showcurrent").style.display = 'none';
     document.getElementById("showvoltage").style.display = 'block';
 }
+function updateDiv() {
+    document.getElementById("content2").innerHTML = document.getElementById("content2").innerHTML;
+    document.getElementById("circuit1").style.display = 'none';
+    document.getElementById("circuit2").style.display = 'none';
+    document.getElementById("circuit3").style.display = 'none';
+    document.getElementById("circuit4").style.display = 'none';
+    document.getElementById("remove").style.display = 'none';
+    document.getElementById("insert").style.display = 'block';
+} 
