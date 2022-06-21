@@ -140,17 +140,19 @@
   cursor: pointer;
 }
 
-.insert-reset{
+.insert-reset {
   display: flex;
-  justify-content: center; 
+  justify-content: center;
   margin: 10px;
 }
-.insert-reset button{
+
+.insert-reset button {
   width: 120px;
   height: 30px;
   border-radius: 20px;
   cursor: pointer;
 }
+
 .current {
   margin: 10px;
 }
@@ -166,7 +168,8 @@
   -webkit-transition: .2s;
   transition: opacity .2s;
 }
-.slider:hover{
+
+.slider:hover {
   opacity: 1;
 }
 
@@ -175,12 +178,13 @@
   appearance: none;
   width: 15px;
   height: 15px;
-  border:2px solid red;
+  border: 2px solid red;
   border-radius: 50%;
   background: #ffffff;
   cursor: pointer;
 }
-.slider::-webkit-slider-thumb:hover{
+
+.slider::-webkit-slider-thumb:hover {
   width: 20px;
   height: 20px;
 }
@@ -213,7 +217,7 @@
   margin: 10px;
 }
 
-.result{
+.result {
   margin: 10px;
   /* background-color: red; */
   text-align: left;
@@ -229,10 +233,64 @@
   text-align: center;
 }
 
-.mainsimulation img{
-  width:600px;
-  height:426px;
+.mainsimulation img {
+  width: 600px;
+  height: 426px;
   margin-top: 30px;
+}
+
+#probe {
+  width: 18px;
+  height: 120px;
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 293px;
+  overflow: hidden;
+  animation-duration: 3s;
+  transition: transform .3s;
+}
+
+@keyframes slideup {
+  from {
+    top: 155px;
+  }
+
+  to {
+    top: 50px;
+  }
+}
+
+#wire {
+  width: 189px;
+  height: 200px;
+  position: absolute;
+  margin-top: 143px;
+  margin-left: 201px;
+  overflow: hidden;
+  animation-duration: 3s;
+  transition: transform .3s;
+}
+
+#hallprobe {
+  width: 18px;
+  height: 78px;
+  position: absolute;
+  margin-top: 88px;
+  margin-left: 290px;
+  overflow: hidden;
+  animation-duration: 3s;
+  transition: transform .3s;
+}
+
+#hallwire {
+  width: 188px;
+  height: 205px;
+  position: absolute;
+  margin-top: 131px;
+  margin-left: 197px;
+  overflow: hidden;
+  animation-duration: 3s;
+  transition: transform .3s;
 }
 
 #content3 {

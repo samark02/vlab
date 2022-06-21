@@ -36,8 +36,6 @@ let pcheck;
 function update() {
     var select = document.getElementById('exp');
     var option = select.options[select.selectedIndex].value;
-    // document.getElementById('value').value = option;
-    // document.getElementById('text').value = option;
 
     if (option == 'mfield vs current') {
         document.getElementById("circuit1").style.display = 'block';
@@ -93,12 +91,21 @@ function insert() {
         document.getElementById("circuit2").style.display = 'block';
         document.getElementById("circuit4").style.display = 'none';
         document.getElementById("circuit3").style.display = 'none';
+
+        document.getElementById("probe").style.display = 'block';
+        document.getElementById("wire").style.display = 'block';
+        document.getElementById("probe").style.animationName = 'slideup';
+        document.getElementById("wire").style.animationName = 'slideup';
     }
     else if (pcheck == false) {
         document.getElementById("circuit1").style.display = 'none';
         document.getElementById("circuit2").style.display = 'none';
         document.getElementById("circuit4").style.display = 'block';
         document.getElementById("circuit3").style.display = 'none';
+        document.getElementById("hallprobe").style.display = 'block';
+        document.getElementById("hallwire").style.display = 'block';
+        document.getElementById("hallprobe").style.animationName = 'slideup';
+        document.getElementById("hallwire").style.animationName = 'slideup';
         enable()
     }
 }
@@ -116,12 +123,24 @@ function remove() {
         document.getElementById("circuit2").style.display = 'none';
         document.getElementById("circuit3").style.display = 'none';
         document.getElementById("circuit4").style.display = 'none';
+
+        document.getElementById("probe").style.display = 'none';
+        document.getElementById("wire").style.display = 'none';
+
+        document.getElementById("hallprobe").style.display = 'none';
+        document.getElementById("hallwire").style.display = 'none';
     }
     else if (pcheck == false) {
         document.getElementById("circuit1").style.display = 'none';
         document.getElementById("circuit2").style.display = 'none';
         document.getElementById("circuit3").style.display = 'block';
         document.getElementById("circuit4").style.display = 'none';
+
+        document.getElementById("probe").style.display = 'none';
+        document.getElementById("wire").style.display = 'none';
+        
+        document.getElementById("hallprobe").style.display = 'none';
+        document.getElementById("hallwire").style.display = 'none';
         disable()
     }
 }
@@ -134,6 +153,8 @@ coutput.innerHTML = cslider.value;
 
 cslider.oninput = function () {
     coutput.innerHTML = this.value;
+    // document.getElementById('value').value = coutput.innerHTML;
+    // document.getElementById('text').value = this.value;
 }
 
 // thickness slider
@@ -167,12 +188,3 @@ function current() {
     document.getElementById("showcurrent").style.display = 'none';
     document.getElementById("showvoltage").style.display = 'block';
 }
-function updateDiv() {
-    document.getElementById("content2").innerHTML = document.getElementById("content2").innerHTML;
-    document.getElementById("circuit1").style.display = 'none';
-    document.getElementById("circuit2").style.display = 'none';
-    document.getElementById("circuit3").style.display = 'none';
-    document.getElementById("circuit4").style.display = 'none';
-    document.getElementById("remove").style.display = 'none';
-    document.getElementById("insert").style.display = 'block';
-} 
