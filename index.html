@@ -56,9 +56,9 @@
             <div class="simoptions">
                 <div class="procedure">
                     <label style="text-align:left;">Choose the procedure :</label><br>
-                    <select name="exp" id="exp">
+                    <select name="exp" id="exp" onChange="update()">
                         <option value="Empty" hidden>Select the Procedure</option>
-                        <option value="magnetic_vs_current">Magnetic Field vs Current</option>
+                        <option value="mfield vs current">Magnetic Field vs Current</option>
                         <option value="Hall Effect">Hall Effect</option>
                     </select>
                 </div>
@@ -99,7 +99,13 @@
                     <label>Carrier Concentration : </label>
                 </div>
             </div>
-            <div class="mainsimulation">Simulation here</div>
+            <!-- simulation -->
+            <div class="mainsimulation">
+                <img id="circuit1" src="images/circuit1.png" alt="circuit1" style="display:none ;">
+                <img id="circuit2" src="images/circuit2.png" alt="circuit2" style="display:none ;">
+                <img id="circuit3" src="images/circuit3.png" alt="circuit3" style="display:none ;">
+                <img id="circuit4" src="images/circuit4.png" alt="circuit4" style="display:none ;">
+            </div>
         </div>
 
         <!-- content3 -->
