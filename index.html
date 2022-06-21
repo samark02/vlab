@@ -6,14 +6,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/style.css">
     <title>Virtual Lab</title>
 </head>
 
 <body>
     <!-- simulation -->
-    <div class="simulation">
+    <div class="simulation" id="simulation">
         <div class="topic">
             <h2>Hall-Effect : Determination of carrier concentration</h2>
         </div>
@@ -31,22 +31,22 @@
             </div>
             <div class="grid-container">
                 <div class="grid-item">
-                    <p>Constant Power Supply</p><img class='img1' src="ammeter.png" alt="ammeter">
+                    <p>Constant Power Supply</p><img class='img1' src="images/ammeter.png" alt="ammeter">
                 </div>
                 <div class="grid-item">
-                    <p>Solenoids</p><img class='img2' src="solenoid.png" alt="electromagent">
+                    <p>Solenoids</p><img class='img2' src="images/solenoid.png" alt="electromagent">
                 </div>
                 <div class="grid-item">
-                    <p>Digital Gauss Meter</p><img class='img3' src="gauss.png" alt="gauss">
+                    <p>Digital Gauss Meter</p><img class='img3' src="images/gauss.png" alt="gauss">
                 </div>
                 <div class="grid-item">
-                    <p>Hall Probe</p><img class='img4' src="hallprobe.png" alt="hallprobe">
+                    <p>Hall Probe</p><img class='img4' src="images/hallprobe.png" alt="hallprobe">
                 </div>
                 <div class="grid-item">
-                    <p>Probe</p><img class='img5' src="probe.png" alt="probe">
+                    <p>Probe</p><img class='img5' src="images/probe1.png" alt="probe">
                 </div>
                 <div class="grid-item">
-                    <p>Constant Power Supply</p><img class='img6' src="power.png" alt="constant power supplu">
+                    <p>Constant Power Supply</p><img class='img6' src="images/power.png" alt="constant power supplu">
                 </div>
             </div>
         </div>
@@ -61,6 +61,8 @@
                         <option value="mfield vs current">Magnetic Field vs Current</option>
                         <option value="Hall Effect">Hall Effect</option>
                     </select>
+                    <!-- <input type="text" id="value">
+                    <input type="text" id="text"> -->
                 </div>
                 <div class="insert-reset">
                     <button id="insert" type="button" onclick="insert()">Insert Probe</button>
@@ -80,19 +82,22 @@
                     </select>
                 </div>
                 <div class="thickness">
-                    <br><p>Thickness: <span id="thickness"></span> mm</p>
+                    <br>
+                    <p>Thickness: <span id="thickness"></span> mm</p>
                     <input type="range" min="0.1" max="0.9" value="0.1" step="0.1" class="slider" id="tslider" disabled>
                 </div>
                 <div class="hallcurrent">
-                    <br><p>Hall Current: <span id="hallcurrent"></span> mA</p>
+                    <br>
+                    <p>Hall Current: <span id="hallcurrent"></span> mA</p>
                     <input type="range" min="1" max="5" value="1" step="0.5" class="slider" id="hcslider" disabled>
                 </div>
                 <div class="insert-reset">
                     <button id="showvoltage" type="button" onclick="voltage()" disabled>Show Voltage</button>
-                    <button id="showcurrent" type="button" onclick="current()" style="display:none ;" disabled>Show Current</button>
+                    <button id="showcurrent" type="button" onclick="current()" style="display:none ;" disabled>Show
+                        Current</button>
                 </div>
                 <div class="insert-reset">
-                    <button type="reset" onclick="updateDiv()">Reset</button>
+                    <button type="reset" onclick="Refresh()">Reset</button>
                 </div>
                 <div class="result">
                     <label>Hall Current : mA</label><br>
@@ -101,10 +106,14 @@
             </div>
             <!-- simulation -->
             <div class="mainsimulation">
-                <img id="circuit1" src="circuit1.png" alt="circuit1" style="display:none ;">
-                <img id="circuit2" src="circuit2.png" alt="circuit2" style="display:none ;">
-                <img id="circuit3" src="circuit3.png" alt="circuit3" style="display:none ;">
-                <img id="circuit4" src="circuit4.png" alt="circuit4" style="display:none ;">
+                <img id="probe" src="images/probe.png" alt="probe" style="display:none ;">
+                <img id="wire" src="images/wire.png" alt="wire" style="display:none ;">
+                <img id="hallprobe" src="images/hallprobe1.png" alt="hallprobe" style="display:none ;">
+                <img id="hallwire" src="images/wire.png" alt="hallwire" style="display:none ;">
+                <img id="circuit1" src="images/circuit1.png" alt="circuit1" style="display:none ;">
+                <img id="circuit2" src="images/circuit2.png" alt="circuit2" style="display:none ;">
+                <img id="circuit3" src="images/circuit3.png" alt="circuit3" style="display:none ;">
+                <img id="circuit4" src="images/circuit4.png" alt="circuit4" style="display:none ;">
             </div>
         </div>
 
@@ -117,14 +126,14 @@
 
         <!-- next button -->
 
-        <button id="buttonup" onclick="up()"><img class="nextimg" src="arrow.png" alt="arrow"></button>
+        <button id="buttonup" onclick="up()"><img class="nextimg" src="images/arrow.png" alt="arrow"></button>
 
-        <button id="buttondown" onclick="down()"><img class="nextimg" src="arrow.png" alt="arrow"></button>
+        <button id="buttondown" onclick="down()"><img class="nextimg" src="images/arrow.png" alt="arrow"></button>
     </div>
 
-    <script src="data.js"></script>
-    <script src="script.js"></script>
-    <script src="main.js"></script>
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
