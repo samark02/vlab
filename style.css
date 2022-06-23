@@ -293,6 +293,17 @@
   transition: transform .3s;
 }
 
+#fieldvalue{
+  width: 64px;
+  height: 21px;
+  position: absolute;
+  margin-top: 326px;
+  margin-left: 414px;
+  border: none;
+  font-size: 19px;
+  text-align: center;
+}
+
 #content3 {
   background-color: skyblue;
   width: 800px;
